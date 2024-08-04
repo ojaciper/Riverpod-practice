@@ -4,6 +4,7 @@ enum City {
   stockholm,
   paris,
   tokyo,
+  nigeria,
 }
 
 const unknowWeatherEmoji = "🤷‍♂️";

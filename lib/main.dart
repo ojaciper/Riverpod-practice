@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_practice/future_provider/state_view.dart';
 import 'package:riverpod_practice/simple_provider/simple_provider.dart';
 import 'package:riverpod_practice/state_notifier_provider/state_notifier_view.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CounterView(),
+      home: const StateView(),
     );
   }
 }
