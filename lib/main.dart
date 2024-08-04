@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_practice/simple_provider/simple_provider.dart';
+import 'package:riverpod_practice/state_notifier_provider/state_notifier_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,11 +19,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Riverpod',
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SimpleProver(),
+      home: const CounterView(),
     );
   }
 }
